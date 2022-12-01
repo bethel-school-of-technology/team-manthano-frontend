@@ -1,1 +1,1 @@
-Here is the translated starter React code.
+# team-manthano-frontend
