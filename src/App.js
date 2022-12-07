@@ -1,14 +1,14 @@
+import React from 'react';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom'; TO BE ADDED
 import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
-import '../public/stylesheets/App.css';
+import LoggedOutNavbar from './components/LoggedOutNavbar';
 
 function App() {
   return (
     <UserProvider>
       <VehicleProvider>
-        <div>
-          <p>This is the framework for the home page.</p>
-        </div>
+       <LoggedOutNavbar />
       </VehicleProvider>
     </UserProvider>
   );
