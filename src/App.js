@@ -6,11 +6,13 @@ import LoggedOutNavbar from './components/LoggedOutNavbar';
 
 function App() {
   return (
-    <UserProvider>
-      <VehicleProvider>
-       <LoggedOutNavbar />
-      </VehicleProvider>
-    </UserProvider>
+    <div className='app'>
+      <UserProvider>
+        <VehicleProvider>
+          <LoggedOutNavbar />
+        </VehicleProvider>
+      </UserProvider>
+    </div>
   );
 }
 
