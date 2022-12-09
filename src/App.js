@@ -1,6 +1,7 @@
 import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
-import '../public/stylesheets/App.css';
+import './public/stylesheets/App.css';
+
 
 function App() {
   return (
