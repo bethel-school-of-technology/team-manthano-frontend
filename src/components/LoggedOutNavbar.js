@@ -4,15 +4,17 @@ import styles from '../public/stylesheets/Navbar.module.css';
 const LoggedOutNavbar = () => {
 
     return (
-        <Navbar className={styles.navbar} expand="lg" variant="dark">
-            <Container>
-                <h1 className={styles.brand}><i className="bi bi-record-circle-fill" style={{'color': '#FFD6E0'}}></i> DONUT CAR SHOP</h1>
-                <Nav>
-                    <Nav.Link href="/login">LOGIN</Nav.Link>
-                    <Nav.Link href="/signup">SIGN UP</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
+        <>
+            <Navbar className={styles.navbar} expand="lg" variant="dark">
+                <Container>
+                    <h1 className={styles.brand}><i className="bi bi-record-circle-fill" style={{ 'color': '#FFD6E0' }}></i> DONUT CAR SHOP</h1>
+                    <Nav>
+                        <Nav.Link href="/login">LOGIN</Nav.Link>
+                        <Nav.Link href="/signup">SIGN UP</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
+        </>
     )
 }
 

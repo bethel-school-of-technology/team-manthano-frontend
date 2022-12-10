@@ -4,6 +4,7 @@ import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import LoggedOutNavbar from './components/LoggedOutNavbar';
 import LoggedInNavbar from './components/LoggedInNavbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <VehicleProvider>
        <LoggedOutNavbar />
        <LoggedInNavbar />
+       <Footer />
       </VehicleProvider>
     </UserProvider>
   );
