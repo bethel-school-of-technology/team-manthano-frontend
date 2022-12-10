@@ -3,12 +3,14 @@ import React from 'react';
 import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import LoggedOutNavbar from './components/LoggedOutNavbar';
+import LoggedInNavbar from './components/LoggedInNavbar';
 
 function App() {
   return (
     <UserProvider>
       <VehicleProvider>
        <LoggedOutNavbar />
+       <LoggedInNavbar />
       </VehicleProvider>
     </UserProvider>
   );
