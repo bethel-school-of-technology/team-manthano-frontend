@@ -4,16 +4,16 @@ import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import './public/stylesheets/App.css';
 import LoggedOutNavbar from './components/LoggedOutNavbar';
+import LoggedInNavbar from './components/LoggedInNavbar';
 
 function App() {
   return (
-    <div className='app'>
-      <UserProvider>
-        <VehicleProvider>
-          <LoggedOutNavbar />
-        </VehicleProvider>
-      </UserProvider>
-    </div>
+    <UserProvider>
+      <VehicleProvider>
+       <LoggedOutNavbar />
+       <LoggedInNavbar />
+      </VehicleProvider>
+    </UserProvider>
   );
 }
 
