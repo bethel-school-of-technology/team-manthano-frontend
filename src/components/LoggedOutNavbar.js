@@ -5,7 +5,7 @@ const LoggedOutNavbar = () => {
 
     return (
         <>
-            <Navbar className={styles.navbar} expand="lg" variant="dark">
+            <Navbar className={styles.navbar} expand="lg" variant="dark" sticky="top">
                 <Container>
                     <h1 className={styles.brand}><i className="bi bi-record-circle-fill" style={{ 'color': '#FFD6E0' }}></i> DONUT CAR SHOP</h1>
                     <Nav>
