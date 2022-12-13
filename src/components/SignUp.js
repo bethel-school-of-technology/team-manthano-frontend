@@ -22,7 +22,7 @@ const SignUp = () => {
     function handleSubmit(event) {
         event.preventDefault();
         createUser(email, username, password, firstName, lastName, phone, zip, profileImage).then(() => {
-            navigate('/signin');
+            navigate('/login');
         }).catch(error => {
             console.log(error);
             window.alert('Error Creating User');
@@ -58,7 +58,7 @@ const SignUp = () => {
                 <Form.Control placeholder="ENTER PROFILE IMAGE" type="text" name="profileImage" value={profileImage} onChange={e => setProfileImage(e.target.value)} />
                 <br />
                 <button type='submit' className={styles.button}>SIGN UP</button> <br /><br />
-                <p>Already Have an Account? <button className={styles.button} onClick={() => {navigate('/signin')}}>SIGN IN</button></p>
+                <p>Already Have an Account? <button className={styles.button} onClick={() => {navigate('/login')}}>LOGIN</button></p>
             </Form.Group>
         </Form>
     )
