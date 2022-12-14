@@ -1,0 +1,20 @@
+.form {
+    padding: 25px;
+    color: #AD6A6C;
+}
+
+.header {
+    text-align: center;
+}
+
+.button {
+    background: #AD6A6C;
+    color: white;
+    border: 0px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.button:hover {
+    background: #9c6062;
+}

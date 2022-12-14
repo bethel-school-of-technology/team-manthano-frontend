@@ -40,7 +40,7 @@ export const VehicleProvider = (props) => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myVehicleToken')}`
         };
-        return axios.put(`${baseUrl}/${post._id}`, post, { headers: myHeaders })
+        return axios.put(`${baseUrl}/${vehicle._id}`, vehicle, { headers: myHeaders })
             .then(response => {
                 getAllVehicles();
                 return new Promise(resolve => resolve(response.data));
@@ -52,7 +52,7 @@ export const VehicleProvider = (props) => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myVehicleToken')}`
         };
-        return axios.delete(`${baseUrl}/${post._id}`, { headers: myHeaders })
+        return axios.delete(`${baseUrl}/${vehicle._id}`, { headers: myHeaders })
             .then(response => {
                 getAllVehicles();
                 return new Promise(resolve => resolve(response.data));

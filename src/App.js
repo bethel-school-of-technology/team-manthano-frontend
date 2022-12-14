@@ -4,6 +4,7 @@ import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import Navigation from './components/Navigation';
 import SignUp from './components/SignUp';
+import Login from './components/Login';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigation />}>
-            <Route path="signup" element={<SignUp />} />
+              <Route path="signup" element={<SignUp />} />
+              <Route path="login" element={<Login />} />
             </Route>
           </Routes>
         </BrowserRouter>
