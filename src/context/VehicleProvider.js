@@ -25,7 +25,7 @@ export const VehicleProvider = (props) => {
 
     function addVehicle(single_vehicle) {
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myVehicleToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myGruveToken')}`
         };
 
         return axios.post(baseUrl, single_vehicle, { headers: myHeaders })
@@ -36,11 +36,11 @@ export const VehicleProvider = (props) => {
             );
     }
 
-    function editVehicle() {
+    function editVehicle(single_vehicle) {
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myVehicleToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myGruveToken')}`
         };
-        return axios.put(`${baseUrl}/${post._id}`, post, { headers: myHeaders })
+        return axios.put(`${baseUrl}/${single_vehicle._id}`, single_vehicle, { headers: myHeaders })
             .then(response => {
                 getAllVehicles();
                 return new Promise(resolve => resolve(response.data));
@@ -48,11 +48,11 @@ export const VehicleProvider = (props) => {
             );
     }
 
-    function deleteVehicle() {
+    function deleteVehicle(single_vehicle) {
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myVehicleToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myGruveToken')}`
         };
-        return axios.delete(`${baseUrl}/${post._id}`, { headers: myHeaders })
+        return axios.delete(`${baseUrl}/${single_vehicle._id}`, { headers: myHeaders })
             .then(response => {
                 getAllVehicles();
                 return new Promise(resolve => resolve(response.data));
