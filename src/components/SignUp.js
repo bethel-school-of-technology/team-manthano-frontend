@@ -14,15 +14,15 @@ const SignUp = () => {
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
     const [zip, setZip] = useState('');
-    const [profileImage, setProfileImage] = useState('');
+    const [profile_image, setProfileImage] = useState('');
 
     let { createUser } = useContext(UserContext);
     let navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
-        createUser(email, username, password, firstName, lastName, phone, zip, profileImage).then(() => {
-            navigate('/login');
+        createUser(username, password, firstName, lastName, email, phone, zip, profile_image).then(() => {
+            navigate('/signin');
         }).catch(error => {
             console.log(error);
             window.alert('Error Creating User');
@@ -55,10 +55,10 @@ const SignUp = () => {
                 <Form.Control placeholder="ENTER ZIP CODE" type="text" name="zip" value={zip} onChange={e => setZip(e.target.value)} />
                 <br />
                 <Form.Label>PROFILE IMAGE</Form.Label>
-                <Form.Control placeholder="ENTER PROFILE IMAGE" type="text" name="profileImage" value={profileImage} onChange={e => setProfileImage(e.target.value)} />
+                <Form.Control placeholder="ENTER PROFILE IMAGE" type="text" name="profileImage" value={profile_image} onChange={e => setProfileImage(e.target.value)} />
                 <br />
                 <button type='submit' className={styles.button}>SIGN UP</button> <br /><br />
-                <p>Already Have an Account? <button className={styles.button} onClick={() => {navigate('/login')}}>LOGIN</button></p>
+                <p>Already Have an Account? <button className={styles.button} onClick={() => { navigate('/signin') }}>LOGIN</button></p>
             </Form.Group>
         </Form>
     )

@@ -4,6 +4,8 @@ import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import Navigation from './components/Navigation';
 import SignUp from './components/SignUp';
+import SignIn from './pages/SignIn';
+import NewVehicle from './pages/NewVehicle';
 import Login from './components/Login';
 
 
@@ -15,6 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigation />}>
               <Route path="signup" element={<SignUp />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/vehicles/new" element={<NewVehicle />} />
               <Route path="login" element={<Login />} />
             </Route>
           </Routes>
