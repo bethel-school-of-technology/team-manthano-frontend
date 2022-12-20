@@ -1,0 +1,25 @@
+GitHub Tutorial: 
+
+1. Run 'git checkout dev' in VS Code terminal.
+2. Run 'git pull' to pull the current dev branch from GitHub.
+3. Run 'git checkout -b <branchName>' in terminal to create new branch. (will reloacte you to new branch)
+4. Code 
+5. Run 'git add .' to add newly created/edited code.
+6. Run 'git commit -m "<message>"'
+7. Run 'git push' to push changes (if this is your first commit on this branch, it will make you set upstream, copy and paste
+from terminal)
+8. Create a pull request on GitHub along with a message, add assignees to review changes. 
+9. Repeat for each Trello card you work on.
+
+Example:
+
+git checkout dev
+git pull
+git checkout -b josiah-test
+'This is a change made' (cmd + s)
+git add .
+git commit -m 'change has been made'
+git push
+git branch --set-upstream-to <remote-branch>
+
+merge pull request
