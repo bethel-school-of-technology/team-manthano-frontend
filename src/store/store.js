@@ -28,3 +28,4 @@ const useStore = createStore((set) => ({
 }))
 
 export default useStore
+
