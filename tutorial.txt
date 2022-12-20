@@ -20,6 +20,6 @@ git checkout -b josiah-test
 git add .
 git commit -m 'change has been made'
 git push
-git push --set-upstream origin josiah-tutorial
+git push --set-upstream origin josiah-test
 
 merge pull request
