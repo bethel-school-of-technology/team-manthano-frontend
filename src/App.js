@@ -7,7 +7,7 @@ import SignUp from './components/SignUp';
 import SignIn from './pages/SignIn';
 import NewVehicle from './pages/NewVehicle';
 import Login from './components/Login';
-
+import globalStyles from './assets/css/global.css'
 
 function App() {
   return (

@@ -1,0 +1,9 @@
+*,
+html {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+.btn-primary {
+  background-color: #ad6a6c !important;
+  border-color: #ad6a6c !important;
+}
