@@ -3,10 +3,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { VehicleProvider } from './context/VehicleProvider';
 import { UserProvider } from './context/UserProvider';
 import Navigation from './components/Navigation';
-import SignUp from './components/SignUp';
-import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 import NewVehicle from './pages/NewVehicle';
-import Login from './components/Login';
+import Login from './pages/Login';
 import globalStyles from './assets/css/global.css'
 
 function App() {
@@ -16,10 +15,9 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigation />}>
-              <Route path="signup" element={<SignUp />} />
-              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path='/login' element={<Login />} />
               <Route path="/vehicles/new" element={<NewVehicle />} />
-              <Route path="login" element={<Login />} />
             </Route>
           </Routes>
         </BrowserRouter>

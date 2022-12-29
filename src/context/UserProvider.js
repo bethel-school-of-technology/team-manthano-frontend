@@ -33,7 +33,7 @@ export const UserProvider = (props) => {
         let user = { username, password };
 
         return axios.post(`${baseUrl}/signin`, user).then(response => {
-            localStorage.setItem('myGruveToken', response.data.token)
+            localStorage.setItem('userToken', response.data.token)
             return new Promise(resolve => {
                 const currentUser = allUsers.find(user => user.username === username);
                 localStorage.setItem('currentUser', JSON.stringify(currentUser))
@@ -44,7 +44,7 @@ export const UserProvider = (props) => {
 
     function getCurrentUser() {
         let reqHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myGruveToken')}`
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
         };
         return axios.get(baseUrl, { headers: reqHeaders });
     }

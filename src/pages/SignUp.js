@@ -58,7 +58,7 @@ const SignUp = () => {
                 <Form.Control placeholder="ENTER PROFILE IMAGE" type="text" name="profileImage" value={profile_image} onChange={e => setProfileImage(e.target.value)} />
                 <br />
                 <button type='submit' className={styles.button}>SIGN UP</button> <br /><br />
-                <p>Already Have an Account? <button className={styles.button} onClick={() => { navigate('/signin') }}>LOGIN</button></p>
+                <p>Already Have an Account? <button className={styles.button} onClick={() => { navigate('/login') }}>LOGIN</button></p>
             </Form.Group>
         </Form>
     )
