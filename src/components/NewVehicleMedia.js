@@ -45,14 +45,16 @@ const NewVehicleMedia = (props) => {
    {uploadedFiles.length > 0 && (
     <div className='gallery-preview'>
      <p>Gallery Preview:</p>
-     {uploadedFiles.map(file => {
-      return (
-       <figure key={Object.keys(file)[0]}>
-        <div className="close" onClick={() => handleRemoveFile(file)}>&#10006;</div>
-        <img height='100px' loading='lazy' src={Object.keys(file)[0]} alt={Object.values(file)[0].name} />
-       </figure>
-      )
-     })}
+     <section className="gallery">
+      {uploadedFiles.map(file => {
+       return (
+        <figure key={Object.keys(file)[0]}>
+         <div className="close" onClick={() => handleRemoveFile(file)}>&#10006;</div>
+         <img loading='lazy' src={Object.keys(file)[0]} alt={Object.values(file)[0].name} />
+        </figure>
+       )
+      })}
+     </section>
     </div>
    )}
   </div>

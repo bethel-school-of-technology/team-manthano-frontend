@@ -10,6 +10,23 @@
 .media-upload-container {
   margin: 20px 0;
 }
+.media-upload-container .gallery-preview {
+  margin-top: 20px;
+}
+.media-upload-container .gallery-preview .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+.media-upload-container .gallery-preview .gallery figure {
+  position: relative;
+}
+.media-upload-container .gallery-preview .gallery figure .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
 @media (max-width: 1280px) {
   .new-vehicle-container {
     padding: 30px 35px 50px;
