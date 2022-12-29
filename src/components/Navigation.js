@@ -11,8 +11,8 @@ const Navigation = () => {
     const [loggedIn, setLoggedIn] = useState(false)
 
     useEffect(() => {
-        if (localStorage.myGruveToken) {
-            setToken(localStorage.myGruveToken)
+        if (localStorage.userToken) {
+            setToken(localStorage.userToken)
         }
     }, []);
 

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../context/UserContext';
 import { Form } from "react-bootstrap";
@@ -9,6 +9,7 @@ const Login = () => {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [errorMsg, setErrorMsg] = useState("");
 
     let { signInUser } = useContext(UserContext);
     let navigate = useNavigate();
@@ -20,7 +21,7 @@ const Login = () => {
             window.alert(`Hello ${username}`);
         }).catch(error => {
             console.log(error);
-            window.alert('Failed login');
+            setErrorMsg('Login Attempt Failed.  Please Try Again.');
         });
     }
 
@@ -28,6 +29,7 @@ const Login = () => {
         <>
             <Form className={styles.form} onSubmit={handleSubmit}>
                 <h1 className={styles.header}>LOGIN</h1>
+                {errorMsg && <p className='error'>{errorMsg}</p>}
                 <Form.Group className="w-100">
                     <Form.Label>Username</Form.Label>
                     <Form.Control placeholder='ENTER USERNAME' type='text' name='username' onChange={e => setUsername(e.target.value)} />
@@ -36,7 +38,7 @@ const Login = () => {
                     <Form.Control placeholder='ENTER PASSWORD' type='password' name='password' onChange={e => setPassword(e.target.value)} />
                     <br />
                     <button type='submit' className={styles.button}>SIGN IN</button> <br /><br />
-                    <p>Already Have an Account? <button className={styles.button} onClick={() => {navigate('/signup')}}>SIGN UP</button></p>
+                    <p>Already Have an Account? <button className={styles.button} onClick={() => {navigate('/login')}}>SIGN UP</button></p>
                 </Form.Group>
             </Form>
         </>

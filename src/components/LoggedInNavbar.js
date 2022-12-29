@@ -17,7 +17,7 @@ const LoggedInNavbar = () => {
                     <p className={styles.greeting}>HELLO, <a className={styles.user} href={`/profile/${loggedInUser._id}`}>{loggedInUser.username}</a></p>
                     <button className={styles.button} onClick={(e) => {
                         e.preventDefault()
-                        localStorage.removeItem("")
+                        localStorage.removeItem("userToken")
                         this.props.history.push('/')
                     }}>LOG OUT</button>
                 </Nav>
