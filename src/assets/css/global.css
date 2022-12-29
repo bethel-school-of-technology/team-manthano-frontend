@@ -7,3 +7,7 @@ html {
   background-color: #ad6a6c !important;
   border-color: #ad6a6c !important;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
