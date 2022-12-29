@@ -1,0 +1,22 @@
+.new-vehicle-container {
+  padding: 30px 9.6% 50px;
+}
+.new-vehicle-container h1 {
+  margin-bottom: 30px;
+}
+.new-vehicle-container form label {
+  font-weight: bold;
+}
+.media-upload-container {
+  margin: 20px 0;
+}
+@media (max-width: 1280px) {
+  .new-vehicle-container {
+    padding: 30px 35px 50px;
+  }
+}
+@media (max-width: 900px) {
+  .new-vehicle-container {
+    padding: 30px 15px 50px;
+  }
+}
