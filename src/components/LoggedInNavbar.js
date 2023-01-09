@@ -1,13 +1,18 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import styles from '../public/stylesheets/Navbar.module.css';
+import { useLocation, useNavigate } from "react-router";
 
 const LoggedInNavbar = () => {
 
+    let location = useLocation();
+    let navigate = useNavigate();
+
     const [loggedInUser, setLoggedInUser] = useState({});
+
     useEffect(() => {
         setLoggedInUser(JSON.parse(localStorage.getItem('currentUser')))
-    }, [])
+    }, [location])
 
     return (
         <Navbar className={styles.navbar} expand="lg" variant="dark" sticky="top">
@@ -18,6 +23,8 @@ const LoggedInNavbar = () => {
                     <button className={styles.button} onClick={(e) => {
                         e.preventDefault()
                         localStorage.removeItem("userToken")
+                        localStorage.removeItem("currentUser")
+                        window.location.reload('/')
                         this.props.history.push('/')
                     }}>LOG OUT</button>
                 </Nav>
