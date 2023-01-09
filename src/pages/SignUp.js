@@ -22,7 +22,7 @@ const SignUp = () => {
     function handleSubmit(event) {
         event.preventDefault();
         createUser(username, password, firstName, lastName, email, phone, zip, profile_image).then(() => {
-            navigate('/signin');
+            navigate('/login');
         }).catch(error => {
             console.log(error);
             window.alert('Error Creating User');

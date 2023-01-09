@@ -1,5 +1,5 @@
 import Stack from 'react-bootstrap/Stack';
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import LoggedOutNavbar from './LoggedOutNavbar';
 import LoggedInNavbar from './LoggedInNavbar';
@@ -7,14 +7,16 @@ import Footer from './Footer';
 
 const Navigation = () => {
 
+    let location = useLocation();
+
     const [token, setToken] = useState();
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(false);
 
     useEffect(() => {
         if (localStorage.userToken) {
             setToken(localStorage.userToken)
         }
-    }, []);
+    }, [location]);
 
     useEffect(() => {
         if (token) {

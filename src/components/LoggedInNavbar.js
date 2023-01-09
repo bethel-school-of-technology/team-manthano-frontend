@@ -5,6 +5,7 @@ import styles from '../public/stylesheets/Navbar.module.css';
 const LoggedInNavbar = () => {
 
     const [loggedInUser, setLoggedInUser] = useState({});
+
     useEffect(() => {
         setLoggedInUser(JSON.parse(localStorage.getItem('currentUser')))
     }, [])
@@ -18,6 +19,8 @@ const LoggedInNavbar = () => {
                     <button className={styles.button} onClick={(e) => {
                         e.preventDefault()
                         localStorage.removeItem("userToken")
+                        localStorage.removeItem("currentUser")
+                        window.location.reload('/')
                         this.props.history.push('/')
                     }}>LOG OUT</button>
                 </Nav>
