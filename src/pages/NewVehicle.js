@@ -20,7 +20,7 @@ const NewVehicle = () => {
       navigate('/vehicles');
     }).catch(error => {
       console.log(error);
-      navigate('/signup');
+      // navigate('/signup');
     });
   }
 
