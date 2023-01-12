@@ -48,16 +48,12 @@
 
 .vehicleInspectLink:hover {
     text-decoration: none;
-    color: #9c6062;
+    color: #824f57;
 }
 
 .textContainer {
     display: flex;
     justify-content: space-between;
-}
-
-.img {
-    height: 350px;
 }
 
 Button:hover {
