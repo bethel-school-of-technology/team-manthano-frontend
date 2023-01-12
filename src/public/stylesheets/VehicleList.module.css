@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    color: #AD6A6C;
+    padding: 25px;
+    float: left;
+    margin: 0px;
+    font-weight: 800;
+}
+
+.button {
+    align-self: center;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+.button:hover {
+    background: #9c6062;
+}
+
+.vehicleContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.card {
+    padding: 10px;
+    margin: 0px 25px;
+    display: flex;
+    background-color: #FFD6E0  !important;
+    color: #AD6A6C;
+    border: none !important;
+}
+
+.vehicleTitle {
+    text-align: center;
+    font-weight: 700;
+}
+
+.vehicleInspectLink {
+    text-decoration: none;
+    color: #AD6A6C;
+}
+
+.vehicleInspectLink:hover {
+    text-decoration: none;
+    color: #9c6062;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+Button:hover {
+    background-color: #9c6062 !important;
+}
+
+.vehicleStatus {
+    margin: 0px;
+    align-self: center;
+    vertical-align: center;
+}

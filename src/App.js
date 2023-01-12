@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import NewVehicle from './pages/NewVehicle';
 import Login from './pages/Login';
 import globalStyles from './assets/css/global.css'
+import HandleVehicleList from './components/HandleVehicleList';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Navigation />}>
+              <Route index element={<HandleVehicleList />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
               <Route path="/vehicles/new" element={<NewVehicle />} />
