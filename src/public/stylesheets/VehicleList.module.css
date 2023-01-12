@@ -28,7 +28,7 @@
 }
 
 .card {
-    padding: 10px;
+    padding: 15px;
     margin: 0px 25px;
     display: flex;
     background-color: #FFD6E0  !important;
@@ -54,6 +54,10 @@
 .textContainer {
     display: flex;
     justify-content: space-between;
+}
+
+.img {
+    height: 350px;
 }
 
 Button:hover {

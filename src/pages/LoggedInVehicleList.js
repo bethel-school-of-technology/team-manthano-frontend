@@ -15,6 +15,14 @@ const LoggedInVehicleList = () => {
             return true
         }
     }
+    
+    function handleImage(v) {
+        if (v.Images) {
+            return v.Images
+        } else {
+            return "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png";
+        }
+    }
 
     return (
         <>
@@ -29,9 +37,8 @@ const LoggedInVehicleList = () => {
                                     navigate('/vehicles/new')
                                 }}>LIST VEHICLE</Button>
                             </div>
-                            <Row xs={1} lg={2} className="g-5">
+                            <Row xs={1} md={2} className="g-5">
                                 {vehicle.map((v) => {
-                                    console.log(v)
                                     return (
                                         <Col key={v._id}>
                                             <Card className={styles.card}>
@@ -39,7 +46,8 @@ const LoggedInVehicleList = () => {
                                                 <div className={styles.textContainer}>
                                                     <a className={styles.vehicleInspectLink} href={`/vehicles/${v._id}`}>INSPECT</a>
                                                     <Card.Text>${v.Price}</Card.Text>
-                                                </div>
+                                                </div><br/>
+                                                <Card.Img className={styles.img} src={handleImage(v)}></Card.Img><br/>
                                                 <div className={styles.textContainer}>
                                                     <Card.Text className={styles.vehicleStatus}>{v.Status}</Card.Text>
                                                     <Button disabled={handleDisabled(v)}>BUY NOW</Button>
