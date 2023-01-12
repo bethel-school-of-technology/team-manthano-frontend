@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import NewVehicle from './pages/NewVehicle';
 import Login from './pages/Login';
 import globalStyles from './assets/css/global.css'
+import AboutUs from './pages/AboutUs';
 import HandleVehicleList from './components/HandleVehicleList';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
               <Route path="/vehicles/new" element={<NewVehicle />} />
+              <Route path="/about-us" element={<AboutUs />} />
             </Route>
           </Routes>
         </BrowserRouter>

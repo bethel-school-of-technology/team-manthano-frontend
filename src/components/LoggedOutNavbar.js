@@ -18,6 +18,7 @@ const LoggedOutNavbar = () => {
                         <h1 className={styles.brand}><i className="bi bi-record-circle-fill" style={{ 'color': '#FFD6E0' }}></i> DONUT CAR SHOP</h1>
                     </div>
                     <Nav>
+                        <Nav.Link href="/about-us">ABOUT</Nav.Link>
                         <Nav.Link href="/login">LOGIN</Nav.Link>
                         <Nav.Link href="/signup">SIGN UP</Nav.Link>
                     </Nav>
