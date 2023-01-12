@@ -27,6 +27,12 @@
   right: 10px;
   cursor: pointer;
 }
+.img-preview p {
+  font-weight: bold;
+}
+.img-preview img {
+  max-height: 100px;
+}
 @media (max-width: 1280px) {
   .new-vehicle-container {
     padding: 30px 35px 50px;
