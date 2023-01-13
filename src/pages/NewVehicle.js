@@ -90,7 +90,7 @@ const NewVehicle = () => {
         </Form.Group>
 
         { /* Media Upload */}
-        <NewVehicleMedia uploadedFiles={uploadedFiles} setUploadedFiles={setUploadedFiles} />
+        <NewVehicleMedia handleChange={handleChange} newVehicle={newVehicle} />
 
         <Form.Group className="mb-3" controlId="Exterior_Color">
           <Form.Label>Exterior Color</Form.Label>

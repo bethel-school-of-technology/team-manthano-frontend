@@ -1,11 +1,11 @@
 import Stack from 'react-bootstrap/Stack';
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import LoggedOutNavbar from './LoggedOutNavbar';
-import LoggedInNavbar from './LoggedInNavbar';
+import LoggedOutVehicleList from '../pages/LoggedOutVehicleList';
+import LoggedInVehicleList from '../pages/LoggedInVehicleList';
 import Footer from './Footer';
 
-const Navigation = () => {
+const HandleVehicleList = () => {
 
     let location = useLocation();
 
@@ -30,11 +30,11 @@ const Navigation = () => {
     function handleLogIn() {
         if (loggedIn === false) {
             return <div>
-                <LoggedOutNavbar />
+                <LoggedOutVehicleList />
             </div>
         } else {
             return <div>
-                <LoggedInNavbar />
+                <LoggedInVehicleList />
             </div>
         }
     }
@@ -50,4 +50,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation;
+export default HandleVehicleList;
