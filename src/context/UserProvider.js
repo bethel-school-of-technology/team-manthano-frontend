@@ -46,14 +46,34 @@ export const UserProvider = (props) => {
         let reqHeaders = {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         };
-        return axios.get(baseUrl, { headers: reqHeaders });
+        return axios.get(`${baseUrl}/oneUser`, {headers:reqHeaders}).then(response => {
+            return new Promise(resolve => resolve(response.data))
+        })
+        // return axios.get(baseUrl, { headers: reqHeaders });
+    }
+
+    function updateUser(users) {
+        let reqHeaders = {
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
+        };
+        // return axios.put(baseUrl + users._id, users, {headers: reqHeaders})
+        //     .then(response => {
+        //         return new Promise(resolve => resolve(response.data))
+        //     }
+        console.log(users)
+        return axios.put(baseUrl + users.user._id, users, {headers: reqHeaders})
+            .then(response => {
+                return new Promise(resolve => resolve(response.data))
+            });
     }
 
     return (
         <UserContext.Provider value={{
+            allUsers,
             createUser,
             signInUser,
             getCurrentUser,
+            updateUser
         }}>
             {props.children}
         </UserContext.Provider>
