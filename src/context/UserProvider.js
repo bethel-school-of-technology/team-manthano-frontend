@@ -46,19 +46,18 @@ export const UserProvider = (props) => {
         let reqHeaders = {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         };
-        return axios.get(`${baseUrl}/oneUser`, {headers:reqHeaders}).then(response => {
+        return axios.get(`${baseUrl}/oneUser`, { headers: reqHeaders }).then(response => {
             return new Promise(resolve => resolve(response.data))
         })
-      
+
     }
 
     function updateUser(users) {
         let reqHeaders = {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         };
-        
-        console.log(users)
-        return axios.put(baseUrl + users.user._id, users, {headers: reqHeaders})
+
+        return axios.put(baseUrl + users.user._id, users, { headers: reqHeaders })
             .then(response => {
                 return new Promise(resolve => resolve(response.data))
             });

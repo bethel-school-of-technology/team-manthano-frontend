@@ -17,7 +17,7 @@ const NewVehicle = () => {
   function handleSubmit(event) {
     event.preventDefault();
     addVehicle(newVehicle).then(() => {
-      navigate('/vehicles');
+      navigate('/account');
     }).catch(error => {
       console.log(error);
       navigate('/signup');

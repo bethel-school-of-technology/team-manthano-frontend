@@ -4,7 +4,7 @@ import UserContext from "../context/UserContext";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import styles from '../public/stylesheets/UserAccount.module.css';
-
+import UVcards from "../components/UVcards";
 
 const UserAccount = () => {
     const [user, setUser] = useState({
@@ -15,8 +15,6 @@ const UserAccount = () => {
         phone: "",
         zip: "",
         profile_image: ""
-
-
     });
     let { id } = useParams();
 
@@ -24,13 +22,11 @@ const UserAccount = () => {
     let navigate = useNavigate();
 
     useEffect(() => {
-        
+
         getCurrentUser(user).then(result => {
-            
-            console.log(result);
-            console.log(result.user._id);
             setUser(result);
         })
+
     }, [id]);
 
     function handleChange(event) {
@@ -51,9 +47,7 @@ const UserAccount = () => {
     }
 
     return (
-
-        
-            
+        <>
             <Form className={styles.form} onSubmit={handleSubmit}>
                 <h1 className={styles.header}>User Profile</h1>
                 <br></br>
@@ -98,9 +92,13 @@ const UserAccount = () => {
                 </Button>
             </Form>
 
-      
-
-
+            {/* User Vehicles */}
+            {user.hasOwnProperty('user') && (
+                <section className="user-vehicles">
+                    <UVcards user={user.user} />
+                </section>
+            )}
+        </>
     );
 
 }
