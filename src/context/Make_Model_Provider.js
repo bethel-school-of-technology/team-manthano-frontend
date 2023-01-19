@@ -25,9 +25,6 @@ const Make_Model_Provider = (props) => {
  });
 
  function handleChange(event) {
-  if (uploadedFiles.length > 0) {
-   newVehicle.Images = uploadedFiles;
-  }
   setNewVehicle((prevValue) => {
    return { ...prevValue, [event.target.name]: event.target.value }
   });

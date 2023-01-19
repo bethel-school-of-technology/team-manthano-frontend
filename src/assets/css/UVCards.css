@@ -1,0 +1,24 @@
+.user-vehicles {
+  margin: 25px 25px 50px;
+}
+.uvGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px 20px;
+  margin-bottom: 30px;
+}
+.uvGrid .card-body {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  grid-gap: 10px;
+}
+.uvGrid .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 20px 20px;
+}
+.uvGrid .delete-btn {
+  width: fit-content;
+}

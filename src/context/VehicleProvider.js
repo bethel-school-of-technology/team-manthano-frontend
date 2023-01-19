@@ -1,10 +1,14 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import VehicleContext from "./VehicleContext";
+import UserContext from "./UserContext";
 
 export const VehicleProvider = (props) => {
 
+    const { getCurrentUser } = useContext(UserContext)
+
     const [vehicle, setVehicle] = useState([]);
+    const [vehicles, setVehicles] = useState([]);
     const baseUrl = "http://localhost:3000/api/vehicles/";
 
     useEffect(() => {
@@ -54,7 +58,7 @@ export const VehicleProvider = (props) => {
         };
         return axios.delete(`${baseUrl}/${single_vehicle._id}`, { headers: myHeaders })
             .then(response => {
-                getAllVehicles();
+                setVehicles(response)
                 return new Promise(resolve => resolve(response.data));
             }
             );
@@ -66,7 +70,9 @@ export const VehicleProvider = (props) => {
             getSingleVehicle,
             addVehicle,
             editVehicle,
-            deleteVehicle
+            deleteVehicle,
+            vehicles,
+            setVehicles
         }}>
             {props.children}
         </VehicleContext.Provider>
