@@ -10,7 +10,7 @@ const AboutUs = () => {
     return (
         <Fragment>
             <section className="about">
-                <div className="row">
+                <div className="about-row">
                     <div className="column">
                         <div className="about-img"></div>
                     </div>

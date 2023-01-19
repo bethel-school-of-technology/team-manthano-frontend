@@ -29,6 +29,12 @@ export const UserProvider = (props) => {
         });
     }
 
+    function getOneUser(id) {
+        return axios.get(baseUrl + id).then(response => {
+            return new Promise(resolve => resolve(response.data))
+        });
+    }
+
     function signInUser(username, password) {
         let user = { username, password };
 
@@ -69,6 +75,7 @@ export const UserProvider = (props) => {
             createUser,
             signInUser,
             getCurrentUser,
+            getOneUser,
             updateUser
         }}>
             {props.children}

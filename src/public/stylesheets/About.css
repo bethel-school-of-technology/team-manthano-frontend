@@ -3,12 +3,12 @@
     background: #fff0f3;
 }
 
-.row {
+.about-row {
     display: flex;
     justify-content: space-around;
 }
 
-.row .column {
+.about-row .column {
     width: 40%;
 }
 

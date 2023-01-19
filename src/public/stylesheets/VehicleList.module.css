@@ -23,7 +23,6 @@
 
 .vehicleContainer {
     display: flex;
-    justify-content: center;
     flex-flow: wrap;
 }
 
@@ -49,6 +48,10 @@
 .vehicleInspectLink:hover {
     text-decoration: none;
     color: #824f57;
+}
+
+.img {
+    background-color: white;
 }
 
 .textContainer {
