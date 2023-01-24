@@ -31,10 +31,10 @@ const Login = () => {
                 <h1 className={styles.header}>LOGIN</h1>
                 {errorMsg && <p className='error'>{errorMsg}</p>}
                 <Form.Group className="w-100">
-                    <Form.Label>Username</Form.Label>
+                    <Form.Label>USERNAME</Form.Label>
                     <Form.Control placeholder='ENTER USERNAME' type='text' name='username' onChange={e => setUsername(e.target.value)} />
                     <br />
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>PASSWORD</Form.Label>
                     <Form.Control placeholder='ENTER PASSWORD' type='password' name='password' onChange={e => setPassword(e.target.value)} />
                     <br />
                     <button type='submit' className={styles.button}>SIGN IN</button> <br /><br />
