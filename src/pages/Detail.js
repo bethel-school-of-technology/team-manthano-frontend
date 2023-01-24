@@ -3,6 +3,7 @@ import { VehicleProvider } from "../context/VehicleProvider";
 import { useParams } from "react-router-dom";
 import VehicleContext from "../context/VehicleContext";
 import styles from '../public/stylesheets/VehicleList.module.css';
+import MapsAPI from '../components/MapsAPI'
 
 function prettifyNumber(number) {
   return new Intl.NumberFormat().format(number);
@@ -23,32 +24,33 @@ const Details = ({ getSingleVehicle }) => {
   }
 
   return (
-    <div style={{marginBottom:30}}>
-    <div className="row g-5 row-cols-1">
-      <div className="col">
-        <div className={`card ${styles.card}`}>
-          <h2>{vehicle.Name}</h2>
-          <div>
-            <img src={vehicle.Images} />
-          </div>
-          <div>
-            <h3>Mileage</h3>
-            {prettifyNumber(vehicle.Mileage)} Miles
-          </div>
-          <div>
-            <h3>Price</h3>$ {prettifyNumber(vehicle.Price)}
-          </div>
-          <div>
-            <h3>Status</h3>
-            {vehicle.Status}
-          </div>
-          <div>
-            <h3>Condition</h3>
-            {vehicle.Condition}
+    <div style={{ marginBottom: 30 }}>
+      <div className="row g-5 row-cols-1">
+        <div className="col">
+          <div className={`card ${styles.card}`}>
+            <h2>{vehicle.Name}</h2>
+            <div>
+              <img src={vehicle.Images} />
+            </div>
+            <div>
+              <h3>Mileage</h3>
+              {prettifyNumber(vehicle.Mileage)} Miles
+            </div>
+            <div>
+              <h3>Price</h3>$ {prettifyNumber(vehicle.Price)}
+            </div>
+            <div>
+              <h3>Status</h3>
+              {vehicle.Status}
+            </div>
+            <div>
+              <h3>Condition</h3>
+              {vehicle.Condition}
+            </div>
+            {/* <MapsAPI postedBy={vehicle?.Posted_By} /> */}
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };
