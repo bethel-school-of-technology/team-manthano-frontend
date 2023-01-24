@@ -12,6 +12,9 @@
   grid-template-columns: 1fr 80px;
   grid-gap: 10px;
 }
+.uvGrid .card {
+  max-width: 50vw;
+}
 .uvGrid .btns {
   display: flex;
   justify-content: space-between;

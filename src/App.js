@@ -11,6 +11,7 @@ import UserAccount from './pages/UserAccount';
 import AboutUs from './pages/AboutUs';
 import HandleVehicleList from './components/HandleVehicleList'
 import Details from './pages/Detail';
+import EditVehicle from './pages/EditVehicle';
 function App() {
   return (
     <UserProvider>
@@ -25,6 +26,7 @@ function App() {
               <Route path="/vehicles/new" element={<NewVehicle />} />
               <Route path="/account" element={<UserAccount />} />
               <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/account/:id" element={<EditVehicle />} />
             </Route>
           </Routes>
         </BrowserRouter>
