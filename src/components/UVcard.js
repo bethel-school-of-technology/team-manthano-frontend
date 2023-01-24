@@ -19,7 +19,7 @@ const UVcard = ({ vehicle, deleteVehicle }) => {
     <div className="col"><Card.Text>${Price.toLocaleString('en-US')}</Card.Text></div>
    </Card.Body>
    <div className="btns">
-    <Link to={`${baseUrl}${_id}`}>
+    <Link to={`${_id}`}>
      <Button variant='primary'>Update Vehcile</Button>
     </Link>
     <Button className='delete-btn' variant='danger' onClick={() => deleteVehicle(vehicle)}>Remove Vehicle</Button>
