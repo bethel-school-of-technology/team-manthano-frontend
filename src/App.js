@@ -12,6 +12,7 @@ import AboutUs from './pages/AboutUs';
 import HandleVehicleList from './components/HandleVehicleList'
 import Details from './pages/Detail';
 import EditVehicle from './pages/EditVehicle';
+import NotFound from './pages/NotFound';
 function App() {
   return (
     <UserProvider>
@@ -27,6 +28,7 @@ function App() {
               <Route path="/account" element={<UserAccount />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/account/:id" element={<EditVehicle />} />
+              <Route path='*' element={<NotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>
