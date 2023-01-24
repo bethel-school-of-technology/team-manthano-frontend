@@ -44,7 +44,7 @@ export const VehicleProvider = (props) => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         };
-        return axios.put(`${baseUrl}/${single_vehicle._id}`, single_vehicle, { headers: myHeaders })
+        return axios.put(`${baseUrl}${single_vehicle._id}`, single_vehicle,{ headers: myHeaders })
             .then(response => {
                 getAllVehicles();
                 return new Promise(resolve => resolve(response.data));
