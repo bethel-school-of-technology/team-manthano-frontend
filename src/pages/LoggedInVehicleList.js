@@ -12,6 +12,10 @@ const LoggedInVehicleList = () => {
 
     let { getOneUser } = useContext(UserContext)
 
+    function prettifyNumber(number) {
+        return new Intl.NumberFormat().format(number);
+      }
+
     function handleStatus(v) {
         if (v.Status === 'Sold') {
             return
@@ -22,7 +26,7 @@ const LoggedInVehicleList = () => {
                         <Card.Title className={styles.vehicleTitle}>{v.Name}</Card.Title>
                         <div className={styles.textContainer}>
                             <a className={styles.vehicleInspectLink} href={`/vehicles/${v._id}`}>LEARN MORE</a>
-                            <Card.Text>${v.Price}</Card.Text>
+                            <Card.Text>${prettifyNumber(v.Price)}</Card.Text>
                         </div><br />
                         <Card.Img className={styles.img} src={handleImage(v)}></Card.Img><br />
                         <div className={styles.textContainer}>

@@ -36,7 +36,7 @@ const Details = ({ getSingleVehicle }) => {
             {prettifyNumber(vehicle.Mileage)} Miles
           </div>
           <div>
-            <h3>Price</h3>$ {prettifyNumber(vehicle.Price)}
+            <h3>Price</h3>${prettifyNumber(vehicle.Price)}
           </div>
           <div>
             <h3>Status</h3>
