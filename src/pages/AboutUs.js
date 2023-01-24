@@ -36,7 +36,7 @@ const AboutUs = () => {
 
                             <div className={toggleTab === 1 ? "content active-content" : "content"}>
                                 <h2>About</h2>
-                                <p>Welcome to are Donut Car Shop! we are a full service, automotive repair and maintenance shop serving your area! Are highly trained and experienced mechanics use only the most quality auto parts during repairs.  We run a clean, efficient, and friendly shop. With competitive pricing and even better deals, so stop on by and see what everyone has been talking about and join in on the experience! </p>
+                                <p>Our online car buying and selling business offers a convenient and streamlined platform for buying and selling vehicles. With a wide selection of cars, competitive pricing, and easy-to-use tools for listing and searching for vehicles, we make the car buying and selling process simple and hassle-free. Whether you’re looking to upgrade your current ride or sell your old car, our platform is the perfect solution.</p>
                             </div>
 
 
@@ -44,7 +44,7 @@ const AboutUs = () => {
 
                             <div className={toggleTab === 2 ? "content active-content" : "content"}>
                                 <h2>Why Choose Us ?</h2>
-                                <p>Our mechanics strive to ensure that your vehicle will be performing at its best before leaving are shop. Our auto repair shop is capable of servicing a variety of makes and models. Our superior standards show that our mechanics always have the best interests of our customers in mind. Looking for a one-stop automotive repair shop? Look no further than us, and allow our mechanics to give you a reliable estimate of any automotive repair issue you might be facing.</p>
+                                <p>Choose us for our vast selection of quality vehicles, competitive pricing, and user-friendly platform. Our team of experts are dedicated to providing a seamless and stress-free buying and selling experience. Trust us to help you find the perfect car or sell your vehicle quickly and efficiently.</p>
                             </div>
 
                             {/*Are Promise Content*/}
@@ -52,7 +52,7 @@ const AboutUs = () => {
                             <div className={toggleTab === 3 ? "content active-content" : "content"}>
                                 <div className="promise-column">
                                     <h2>What Is Are Promise?</h2>
-                                    <p>Our goal is to reach 100% satisfaction with our customers. We will never compromise our integrity and believe that honesty is the best policy.We will provide you with the highest level of professional, quality, and friendly service. We understand that sometimes car repairs can be stressful and we will do everything possible to make our customers feel welcome, comfortable and satisfied with their service experience.  Visit us for all of your maintenance and repair needs!  </p>
+                                    <p>Our promise is to provide you with a transparent and easy car buying and selling experience. We guarantee a wide selection of quality vehicles, fair pricing, and customer-focused service every step of the way.</p>
                                 </div>
                             </div>
                         </div>
