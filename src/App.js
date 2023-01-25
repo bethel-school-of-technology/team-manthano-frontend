@@ -10,7 +10,7 @@ import globalStyles from './assets/css/global.css'
 import UserAccount from './pages/UserAccount';
 import AboutUs from './pages/AboutUs';
 import HandleVehicleList from './components/HandleVehicleList'
-import Details from './pages/Detail';
+import Detail from './pages/Detail';
 import EditVehicle from './pages/EditVehicle';
 import NotFound from './pages/NotFound';
 function App() {
@@ -23,7 +23,7 @@ function App() {
               <Route index element={<HandleVehicleList />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/vehicles/:id" element={<Details />} />
+              <Route path="/vehicles/:id" element={<Detail />} />
               <Route path="/vehicles/new" element={<NewVehicle />} />
               <Route path="/account" element={<UserAccount />} />
               <Route path="/about-us" element={<AboutUs />} />
