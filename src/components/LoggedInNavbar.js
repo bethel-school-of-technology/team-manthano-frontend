@@ -30,6 +30,7 @@ const LoggedInNavbar = () => {
                         e.preventDefault()
                         localStorage.removeItem("userToken")
                         localStorage.removeItem("currentUser")
+                        navigate('/')
                         window.location.reload('/')
                         this.props.history.push('/')
                     }}>LOG OUT</button>
