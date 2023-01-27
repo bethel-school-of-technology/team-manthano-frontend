@@ -20,11 +20,95 @@
 .txt {
     text-align: center;
     position: absolute;
-    size: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 55px;
     color: #AD6A6C;
     font-weight: bold;
+}
+
+@media (min-width: 0px) {
+    .carPhoto:before {
+        height: 100px;
+    }
+
+    .txt {
+        font-size: calc(.50em + .50vw);
+    }
+}
+
+@media (min-width: 375px) {
+    .carPhoto:before {
+        height: 125px;
+    }
+
+    .txt {
+        font-size: calc(.75em + .75vw);
+    }
+}
+
+@media (min-width: 680px) {
+    .carPhoto:before {
+        height: 175px;
+    }
+
+    .txt {
+        font-size: calc(1.1em + 1.1vw);
+    }
+}
+
+@media (min-width: 780px) {
+    .carPhoto:before {
+        height: 200px;
+    }
+
+    .txt {
+        font-size: calc(1.3em + 1.3vw);
+    }
+}
+
+@media (min-width: 870px) {
+    .carPhoto:before {
+        height: 225px;
+    }
+
+    .txt {
+        font-size: calc(1.4em + 1.4vw);
+    }
+}
+
+@media (min-width: 970px) {
+    .carPhoto:before {
+        height: 250px;
+    }
+
+    .txt {
+        font-size: calc(1.5em + 1.5vw);
+    }
+}
+
+@media (min-width: 1080px) {
+    .carPhoto:before {
+        height: 250px;
+    }
+
+    .txt {
+        font-size: calc(1.6em + 1.6vw);
+    }
+}
+
+@media (min-width: 1200px) {
+    .carPhoto:before {
+        height: 275px;
+    }
+
+    .txt {
+        font-size: calc(1.7em + 1.7vw);
+    }
+}
+
+@media (min-width: 1400px) {
+    .txt {
+        font-size: calc(1.8em + 1.8vw);
+    }
 }
