@@ -48,8 +48,36 @@ const LoggedOutDetails = () => {
             {vehicle.Status}
           </div>
           <div>
+            <h3>Year</h3>
+            {vehicle.Year}
+          </div>
+          <div>
+            <h3>Posted_At</h3>
+            {vehicle.Posted_At}
+          </div>
+          <div>
             <h3>Condition</h3>
             {vehicle.Condition}
+          </div>
+          <div>
+            <h3>Body_Style</h3>
+            {console.log(vehicle)}
+          </div>
+          <div>
+            <h3>Fuel_Economy</h3>
+            {console.log(vehicle.Fuel_Economy)}
+          </div>
+          <div>
+            <h3>Exterior_Color</h3>
+            {console.log(vehicle.Exterior_Color)}
+          </div>
+          <div>
+            <h3>Vehicle_Model</h3>
+            {console.log(vehicle.Vehicle_Model)}
+          </div>
+          <div>
+            <h3>Vehicle_Manufacturer</h3>
+            {console.log(vehicle.Vehicle_Manufacturer)}
           </div>
         </div>
       </div>
