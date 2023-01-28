@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import VehicleContext from "../context/VehicleContext";
-import styles from '../public/stylesheets/VehicleList.module.css';
+import styles from '../public/stylesheets/Detail.module.css';
 import MapsAPI from '../components/MapsAPI'
+import { Button, Card } from "react-bootstrap";
+import moment from 'moment';
+import UserContext from "../context/UserContext";
 
 // changes the numbers to include a comma
 function prettifyNumber(number) {
@@ -11,80 +14,142 @@ function prettifyNumber(number) {
 
 //renders if a user is logged out
 const LoggedOutDetails = () => {
-    const { id } = useParams();
+
     const [vehicle, setVehicle] = useState(null);
 
-    let { getSingleVehicle } = useContext(VehicleContext)
+    const { id } = useParams();
+
+    let { getSingleVehicle } = useContext(VehicleContext);
 
     useEffect(() => {
         const fetchVehicle = async () => {
             setVehicle(await getSingleVehicle(id));
         };
+
         fetchVehicle();
     }, [id]);
+
 
     if (vehicle === null) {
         return <></>;
     }
 
-  return (
-    <div style={{marginBottom:30}}>
-    <div className="row g-5 row-cols-1">
-      <div className="col">
-        <div className={`card ${styles.card}`}>
-          <h2>{vehicle.Name}</h2>
-          <div>
-            <img src={vehicle.Images} />
-          </div>
-          <div>
-            <h3>Mileage</h3>
-            {prettifyNumber(vehicle.Mileage)} Miles
-          </div>
-          <div>
-            <h3>Price</h3>$ {prettifyNumber(vehicle.Price)}
-          </div>
-          <div>
-            <h3>Status</h3>
-            {vehicle.Status}
-          </div>
-          <div>
-            <h3>Year</h3>
-            {vehicle.Year}
-          </div>
-          <div>
-            <h3>Posted_At</h3>
-            {vehicle.Posted_At}
-          </div>
-          <div>
-            <h3>Condition</h3>
-            {vehicle.Condition}
-          </div>
-          <div>
-            <h3>Body_Style</h3>
-            {console.log(vehicle)}
-          </div>
-          <div>
-            <h3>Fuel_Economy</h3>
-            {console.log(vehicle.Fuel_Economy)}
-          </div>
-          <div>
-            <h3>Exterior_Color</h3>
-            {console.log(vehicle.Exterior_Color)}
-          </div>
-          <div>
-            <h3>Vehicle_Model</h3>
-            {console.log(vehicle.Vehicle_Model)}
-          </div>
-          <div>
-            <h3>Vehicle_Manufacturer</h3>
-            {console.log(vehicle.Vehicle_Manufacturer)}
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  );
-};
+    function handleImage(v) {
+        if (v.Images) {
+            return v.Images
+        } else {
+            return "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png";
+        }
+    }
+
+    let date = moment(vehicle.Posted_At).format('M/DD/YYYY HH:mm');
+
+    console.log(vehicle)
+
+    return (
+        <>
+            <Card className={styles.card}>
+                <div className={styles.container}>
+                    <h3>{vehicle.Name} - <a className={styles.link} href="/login">Login to See Price</a></h3>
+                    <Card.Text className={styles.user}>{date}</Card.Text>
+                </div>
+                <Card.Img className={styles.img} src={handleImage(vehicle)}></Card.Img>
+                <div className={styles.textContainer}>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Year: {vehicle.Year}</Card.Title>
+                        <Card.Title>Make: {vehicle.Vehicle_Manufacturer}</Card.Title>
+                        <Card.Title>Model: {vehicle.Vehicle_Model}</Card.Title>
+                    </div>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Condition: {vehicle.Condition}</Card.Title>
+                        <Card.Title>Mileage: {prettifyNumber(vehicle.Mileage)} Miles</Card.Title>
+                    </div>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Body Style: {vehicle.Body_Style}</Card.Title>
+                        <Card.Title>Status: {vehicle.Status}</Card.Title>
+                    </div>
+                </div>
+            </Card>
+        </>
+    )
+}
+
+//renders if a user is logged in
+const LoggedInDetails = () => {
+
+    const [vehicle, setVehicle] = useState(null);
+
+    const { id } = useParams();
+
+    let { getSingleVehicle } = useContext(VehicleContext);
+    let { getOneUser } = useContext(UserContext);
+
+    useEffect(() => {
+        const fetchVehicle = async () => {
+            setVehicle(await getSingleVehicle(id));
+        };
+
+        fetchVehicle();
+    }, [id]);
+
+
+    if (vehicle === null) {
+        return <></>;
+    }
+
+    function handleImage(v) {
+        if (v.Images) {
+            return v.Images
+        } else {
+            return "https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-1-scaled-1150x647.png";
+        }
+    }
+
+    let date = moment(vehicle.Posted_At).format('M/DD/YYYY HH:mm');
+
+    function handleClick(v) {
+        let userId = v.Posted_By
+        let subject = 'Is This Vehicle Still Available?'
+        if (userId) {
+            getOneUser(userId)
+                .then((user) => {
+                    let body = `Hello, ${user.firstName}. Is the ${v.Name} still available?`
+                    console.log(user)
+                    window.open(`mailto:${user.email}?subject=${subject}&body=${body}`)
+                })
+        } else {
+            window.alert('Seller Contact Info Not Found')
+        }
+    }
+
+    return (
+        <>
+            <Card className={styles.card}>
+                <div className={styles.container}>
+                    <h3>{vehicle.Name} - ${prettifyNumber(vehicle.Price)}</h3>
+                    <Card.Text className={styles.user}>{date}</Card.Text>
+                </div>
+                <Card.Img className={styles.img} src={handleImage(vehicle)}></Card.Img>
+                <div className={styles.textContainer}>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Year: {vehicle.Year}</Card.Title>
+                        <Card.Title>Make: {vehicle.Vehicle_Manufacturer}</Card.Title>
+                        <Card.Title>Model: {vehicle.Vehicle_Model}</Card.Title>
+                    </div>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Condition: {vehicle.Condition}</Card.Title>
+                        <Card.Title>Mileage: {prettifyNumber(vehicle.Mileage)} Miles</Card.Title>
+                    </div>
+                    <div className={styles.textDivider}>
+                        <Card.Title>Body Style: {vehicle.Body_Style}</Card.Title>
+                        <Card.Title>Status: {vehicle.Status}</Card.Title>
+                    </div>
+                </div>
+                <Button className={styles.button} onClick={() => { handleClick(vehicle) }}>CONTACT SELLER</Button>
+            </Card>
+        </>
+    )
+}
 
 // checks if user is logged in, returning correct page
 const HandleVehicleDetail = () => {
@@ -115,7 +180,7 @@ const HandleVehicleDetail = () => {
             </div>
         } else {
             return <div>
-                 <LoggedInDetails />
+                <LoggedInDetails />
             </div>
         }
     }

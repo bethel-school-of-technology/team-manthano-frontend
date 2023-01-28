@@ -1,0 +1,51 @@
+.card {
+    padding: 15px;
+    margin: 35px auto;
+    width: 70%;
+    display: flex;
+    background-color: #FFD6E0  !important;
+    color: #AD6A6C;
+    border: none !important;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: #AD6A6C;
+    padding-bottom: 25px;
+}
+
+.link:hover {
+    color: #824f57;
+}
+
+.user {
+    font-style: italic;
+}
+
+.img {
+    background-color: white;
+}
+
+.textContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.textDivider {
+    padding: 0px 25px;
+}
+
+@media (max-width: 600px) {
+    .textDivider {
+        padding: 0px;
+    }
+}
+
+.button {
+    margin-top: 15px;
+}
