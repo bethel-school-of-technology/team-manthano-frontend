@@ -18,15 +18,15 @@ const AboutUs = () => {
                         <div className="tabs">
 
                             <div className={toggleTab === 1 ? "single-tab active-tab" : "single-tab"} onClick={() => toggleState(1)}>
-                                <h2>About</h2>
+                                <h2>ABOUT</h2>
                             </div>
 
                             <div className={toggleTab === 2 ? "single-tab active-tab" : "single-tab"} onClick={() => toggleState(2)}>
-                                <h2>Why Choose Us ?</h2>
+                                <h2>WHY CHOOSE US?</h2>
                             </div>
 
                             <div className={toggleTab === 3 ? "single-tab active-tab" : "single-tab"} onClick={() => toggleState(3)}>
-                                <h2>Our Promise</h2>
+                                <h2>OUR PROMISE</h2>
                             </div>
 
                         </div>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                             {/*About Content*/}
 
                             <div className={toggleTab === 1 ? "content active-content" : "content"}>
-                                <h2>About</h2>
+                                <h2>ABOUT</h2>
                                 <p>Our online car buying and selling business offers a convenient and streamlined platform for buying and selling vehicles. With a wide selection of cars, competitive pricing, and easy-to-use tools for listing and searching for vehicles, we make the car buying and selling process simple and hassle-free. Whether you’re looking to upgrade your current ride or sell your old car, our platform is the perfect solution.</p>
                             </div>
 
@@ -43,7 +43,7 @@ const AboutUs = () => {
                             {/*Why Choose Us Content*/}
 
                             <div className={toggleTab === 2 ? "content active-content" : "content"}>
-                                <h2>Why Choose Us ?</h2>
+                                <h2>WHY CHOOSE US?</h2>
                                 <p>Choose us for our vast selection of quality vehicles, competitive pricing, and user-friendly platform. Our team of experts are dedicated to providing a seamless and stress-free buying and selling experience. Trust us to help you find the perfect car or sell your vehicle quickly and efficiently.</p>
                             </div>
 
@@ -51,8 +51,8 @@ const AboutUs = () => {
 
                             <div className={toggleTab === 3 ? "content active-content" : "content"}>
                                 <div className="promise-column">
-                                    <h2>What Is Our Promise?</h2>
-                                    <p>Our promise is to provide you with a transparent and easy car buying and selling experience. We guarantee a wide selection of quality vehicles, fair pricing, and customer-focused service every step of the way.</p>
+                                    <h2>WHAT IS OUR PROMISE?</h2>
+                                    <p>We promise to provide you with a transparent and easy car buying and selling experience. We guarantee a wide selection of quality vehicles, fair pricing, and customer-focused service every step of the way.</p>
                                 </div>
                             </div>
                         </div>

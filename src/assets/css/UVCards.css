@@ -1,3 +1,6 @@
+.list-heading {
+  color: #AD6A6C;
+}
 .user-vehicles {
   margin: 25px 25px 50px;
 }
@@ -30,4 +33,9 @@
 }
 .uvGrid .delete-btn {
   width: fit-content;
+}
+
+.uvGrid .delete-btn:hover {
+  width: fit-content;
+  background-color: #c92f3e !important;
 }

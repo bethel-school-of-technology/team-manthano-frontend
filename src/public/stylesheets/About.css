@@ -20,6 +20,7 @@
     background: white;
     margin-right: 10px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .single-tab h2 {
@@ -28,7 +29,7 @@
     border-radius: 4px;
     color: #3c3c3c;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .about-img {
@@ -37,6 +38,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border-radius: 10px;
     height: 600px;
     width: 100%;
 }
@@ -44,6 +46,7 @@
 .content {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    color: #AD6A6C;
     display: none; 
 }
 

@@ -9,7 +9,7 @@ const NewVehicleMedia = (props) => {
   const { Images } = img;
   return (
    <section className="img-preview">
-    <p>Image preview</p>
+    <p>IMAGE PREVIEW</p>
     <img src={Images} alt="uploaded image" />
    </section>
   )
@@ -17,7 +17,7 @@ const NewVehicleMedia = (props) => {
  return (
   <div className='media-upload-container'>
    <Form.Group className="mb-3" controlId="Images">
-    <Form.Label>Vehicle Image</Form.Label>
+    <Form.Label>VEHICLE IMAGE</Form.Label>
     <Form.Control type="text" placeholder="https://example.com" name="Images" value={newVehicle.Images} onChange={handleChange} />
    </Form.Group>
 

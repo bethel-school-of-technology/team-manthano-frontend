@@ -49,7 +49,7 @@ const Make_Model_Provider = (props) => {
   var keys = Object.keys(makes);
   return (
    <Form.Group className="mb-3" controlId="Vehicle_Manufacturer">
-    <Form.Label>Manufacturer</Form.Label>
+    <Form.Label>MANUFACTURER</Form.Label>
     <Form.Select name="Vehicle_Manufacturer" onChange={handleChange} required>
      <option value="">Manufacturer</option>
      {keys.map(make => {
@@ -70,7 +70,7 @@ const Make_Model_Provider = (props) => {
   }
   return (
    <Form.Group className="mb-3" controlId="Vehicle_Model">
-    <Form.Label>Model</Form.Label>
+    <Form.Label>MODEL</Form.Label>
     <Form.Select name="Vehicle_Model" onChange={handleChange} required>
      <option value="">Model</option>
      {filtered_entries[0][1].map(model => {
