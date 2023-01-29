@@ -8,7 +8,6 @@ import UVcards from "../components/UVcards";
 
 const UserAccount = () => {
     const [user, setUser] = useState({
-        username: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -52,11 +51,7 @@ const UserAccount = () => {
                 <h1 className={styles.header}>User Profile</h1>
                 <br></br>
                 <h3>Edit User Information</h3>
-                <Form.Group className="mb-3">
-                    <Form.Label>User Name</Form.Label>
-                    <Form.Control type="text" defaultValue={user.user?.username} name="userName" onChange={handleChange} />
-                </Form.Group>
-
+                
                 <Form.Group className="mb-3">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.firstName} name="firstName" onChange={handleChange} />
