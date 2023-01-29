@@ -34,6 +34,7 @@ const LoggedInNavbar = () => {
                         window.location.reload('/')
                         this.props.history.push('/')
                     }}>LOG OUT</button>
+                    <Nav.Link href="/about-us">ABOUT</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

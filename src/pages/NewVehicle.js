@@ -26,10 +26,10 @@ const NewVehicle = () => {
 
   return (
     <div className='new-vehicle-container'>
-      <h1>List Vehicle</h1>
+      <h1>LIST VEHICLE</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="Name" required>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>NAME</Form.Label>
           <Form.Control type="text" placeholder="Vehicle Title" name="Name" value={newVehicle.Name} onChange={handleChange} />
         </Form.Group>
 
@@ -40,12 +40,12 @@ const NewVehicle = () => {
         {newVehicle.hasOwnProperty('Vehicle_Manufacturer') && handleModels()}
 
         <Form.Group className="mb-3" controlId="Year" required>
-          <Form.Label>Year</Form.Label>
+          <Form.Label>YEAR</Form.Label>
           <Form.Control required type="text" placeholder={new Date().getFullYear()} name="Year" value={newVehicle.Year} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Condition">
-          <Form.Label>Condition</Form.Label>
+          <Form.Label>CONDITION</Form.Label>
           <Form.Select name="Condition" onChange={handleChange}>
             <option value="New">New</option>
             <option value="Used">Used</option>
@@ -53,17 +53,17 @@ const NewVehicle = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Price" required>
-          <Form.Label>Price</Form.Label>
+          <Form.Label>PRICE</Form.Label>
           <Form.Control type="text" placeholder="20000" name="Price" value={newVehicle.Price} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Mileage" required>
-          <Form.Label>Mileage</Form.Label>
+          <Form.Label>MILEAGE</Form.Label>
           <Form.Control required type="number" placeholder="50000" name="Mileage" value={newVehicle.Mileage} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Body_Style">
-          <Form.Label>Body Style</Form.Label>
+          <Form.Label>BODY STYLE</Form.Label>
           <Form.Select name="Body_Style" onChange={handleChange}>
             <option value="Convertible">Convertible</option>
             <option value="Sedan">Sedan</option>
@@ -75,17 +75,17 @@ const NewVehicle = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="FE_city">
-          <Form.Label>City</Form.Label>
+          <Form.Label>CITY</Form.Label>
           <Form.Control step="1" max="100" min="0" type="number" placeholder="20" name="city" value={newVehicle?.Fuel_Economy?.city} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="FE_hwy">
-          <Form.Label>Highway</Form.Label>
+          <Form.Label>HIGHWAY</Form.Label>
           <Form.Control step="1" max="100" min="0" type="number" placeholder="30" name="highway" value={newVehicle?.Fuel_Economy?.highway} onChange={handleChange} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="FE_combined">
-          <Form.Label>Combined</Form.Label>
+          <Form.Label>COMBINED</Form.Label>
           <Form.Control step="1" max="100" min="0" type="number" placeholder="25" name="combined" value={newVehicle?.Fuel_Economy?.combined} onChange={handleChange} />
         </Form.Group>
 
@@ -93,7 +93,7 @@ const NewVehicle = () => {
         <NewVehicleMedia handleChange={handleChange} newVehicle={newVehicle} />
 
         <Form.Group className="mb-3" controlId="Exterior_Color">
-          <Form.Label>Exterior Color</Form.Label>
+          <Form.Label>EXTERIOR COLOR</Form.Label>
           <Form.Select name="Exterior_Color" onChange={handleChange}>
             <option value="Black">Black</option>
             <option value="Blue">Blue</option>
@@ -108,7 +108,7 @@ const NewVehicle = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="Status">
-          <Form.Label>Status</Form.Label>
+          <Form.Label>STATUS</Form.Label>
           <Form.Select name="Status" onChange={handleChange}>
             <option value="For Sale">For Sale</option>
             <option value="Pending">Pending</option>
@@ -117,7 +117,7 @@ const NewVehicle = () => {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Add Vehicle Listing
+          ADD VEHICLE
         </Button>
       </Form>
     </div>

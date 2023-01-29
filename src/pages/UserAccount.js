@@ -49,46 +49,46 @@ const UserAccount = () => {
     return (
         <>
             <Form className={styles.form} onSubmit={handleSubmit}>
-                <h1 className={styles.header}>User Profile</h1>
+                <h1 className={styles.header}>USER PROFILE</h1>
                 <br></br>
-                <h3>Edit User Information</h3>
+                <h3>EDIT USER INFORMATION</h3>
                 <Form.Group className="mb-3">
-                    <Form.Label>User Name</Form.Label>
-                    <Form.Control type="text" defaultValue={user.user?.username} name="userName" onChange={handleChange} />
+                    <Form.Label>USERNAME</Form.Label>
+                    <Form.Control type="text" defaultValue={user.user?.username} name="userName" onChange={handleChange} disabled />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>First Name</Form.Label>
+                    <Form.Label>FIRST NAME</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.firstName} name="firstName" onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Last Name</Form.Label>
+                    <Form.Label>LAST NAME</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.lastName} name="lastName" onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>EMAIL</Form.Label>
                     <Form.Control type="email" defaultValue={user.user?.email} name="email" onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Phone Number</Form.Label>
+                    <Form.Label>PHONE NUMBER</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.phone} name="phone" onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Zip</Form.Label>
+                    <Form.Label>ZIP CODE</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.zip} name="zip" onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>Profile Image</Form.Label>
+                    <Form.Label>PROFILE IMAGE</Form.Label>
                     <Form.Control type="text" defaultValue={user.user?.profile_image} name="profile_image" onChange={handleChange} />
                 </Form.Group>
 
                 <Button className={styles.button} variant="primary" type="submit">
-                    Update User Information
+                    UPDATE INFORMATION
                 </Button>
             </Form>
 

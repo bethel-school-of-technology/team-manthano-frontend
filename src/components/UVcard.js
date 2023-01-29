@@ -20,9 +20,9 @@ const UVcard = ({ vehicle, deleteVehicle }) => {
    </Card.Body>
    <div className="btns">
     <Link to={`${_id}`}>
-     <Button variant='primary'>Update Vehcile</Button>
+     <Button variant='primary'>UPDATE VEHICLE</Button>
     </Link>
-    <Button className='delete-btn' variant='danger' onClick={() => deleteVehicle(vehicle)}>Remove Vehicle</Button>
+    <Button className='delete-btn' variant='danger' onClick={() => deleteVehicle(vehicle)}>REMOVE VEHICLE</Button>
    </div>
   </Card>
  )

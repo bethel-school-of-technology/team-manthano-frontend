@@ -37,7 +37,7 @@ const Login = () => {
                     <Form.Label>PASSWORD</Form.Label>
                     <Form.Control placeholder='ENTER PASSWORD' type='password' name='password' onChange={e => setPassword(e.target.value)} />
                     <br />
-                    <button type='submit' className={styles.button}>SIGN IN</button> <br /><br />
+                    <button type='submit' className={styles.button}>LOGIN</button> <br /><br />
                     <p>Don't Have an Account? <button className={styles.button} onClick={() => {navigate('/signup')}}>SIGN UP</button></p>
                 </Form.Group>
             </Form>

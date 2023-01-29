@@ -1,7 +1,10 @@
 .new-vehicle-container {
+  color: #AD6A6C;
   padding: 30px 9.6% 50px;
 }
 .new-vehicle-container h1 {
+  text-align: center;
+  font-weight: 800;
   margin-bottom: 30px;
 }
 .new-vehicle-container form label {

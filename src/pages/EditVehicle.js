@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Link, useNavigate, useParams } from "react-router-dom";
 import VehicleContext from "../context/VehicleContext";
+import styles from '../public/stylesheets/EditVehicle.module.css';
 
 
 
@@ -57,25 +58,27 @@ function EditVehicle() {
   
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form className={styles.form} onSubmit={handleSubmit}>
+
+<h1 className={styles.header}>EDIT VEHICLE</h1>
     
       <Form.Group className="mb-3" >
-        <Form.Label>Name</Form.Label>
+        <Form.Label>NAME</Form.Label>
         <Form.Control type="text" name="Name" value={Name} onChange={handleChange} />
       </Form.Group>
 
       <Form.Group className="mb-3" >
-        <Form.Label>Mileage</Form.Label>
+        <Form.Label>MILEAGE</Form.Label>
         <Form.Control type="number" name="Mileage" value={Mileage} onChange={handleChange} />
       </Form.Group>
 
       <Form.Group className="mb-3" >
-        <Form.Label>Price</Form.Label>
+        <Form.Label>PRICE</Form.Label>
         <Form.Control type="number" name="Price" value={Price} onChange={handleChange} />
       </Form.Group>
 
       <Form.Group className="mb-3" >
-        <Form.Label>Status</Form.Label>
+        <Form.Label>STATUS</Form.Label>
         <Form.Select name="Condition" onChange={handleChange}>
             <option value="For Sale">For Sale</option>
             <option value="Pending">Pending</option>
@@ -84,14 +87,14 @@ function EditVehicle() {
       </Form.Group>
 
       <Form.Group className="mb-3" >
-        <Form.Label>Conditon</Form.Label>
+        <Form.Label>CONDITION</Form.Label>
         <Form.Select name="Condition" onChange={handleChange}>
             <option value="New">New</option>
             <option value="Used">Used</option>
           </Form.Select>
       </Form.Group>
 
-      <Button type="submit">Save</Button>
+      <Button className={styles.button} type="submit">SAVE</Button>
       
     </Form>
   )

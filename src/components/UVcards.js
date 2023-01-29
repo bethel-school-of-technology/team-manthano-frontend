@@ -20,19 +20,19 @@ const UVcards = ({ user }) => {
  if (vehicles.length === 0) {
   return (
    <Link to='/vehicles/new'>
-    <Button variant='primary'>List New Vehicle</Button>
+    <Button variant='primary'>LIST NEW VEHICLE</Button>
    </Link>
   )
  }
 
  return (
   <>
-   <h2>Your Listed Vehicles</h2>
+   <h2 className="list-heading">YOUR LISTED VEHICLES</h2>
    <div className="uvGrid">
     {vehicles.length > 0 && vehicles.map(vehicle => <UVcard deleteVehicle={deleteVehicle} vehicle={vehicle} key={vehicle._id} />)}
    </div>
    <Link to='/vehicles/new'>
-    <Button variant='primary'>List New Vehicle</Button>
+    <Button variant='primary'>LIST NEW VEHICLE</Button>
    </Link>
   </>
  )
