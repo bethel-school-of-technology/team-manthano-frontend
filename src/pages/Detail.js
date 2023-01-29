@@ -145,6 +145,7 @@ const LoggedInDetails = () => {
                         <Card.Title>Status: {vehicle.Status}</Card.Title>
                     </div>
                 </div>
+                <MapsAPI postedBy={vehicle.Posted_By} />
                 <Button className={styles.button} onClick={() => { handleClick(vehicle) }}>CONTACT SELLER</Button>
             </Card>
         </>

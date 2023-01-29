@@ -14,6 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 80px;
   grid-gap: 10px;
+  padding-bottom: 0;
 }
 .uvGrid .card {
   max-width: 50vw;
@@ -21,9 +22,14 @@
 .uvGrid .btns {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
   margin: 0 20px 20px;
+}
+.uvGrid a,
+.uvGrid button {
+  display: inline-block;
+  margin-top: 10px;
 }
 .uvGrid .delete-btn {
   width: fit-content;

@@ -22,11 +22,14 @@ const MapsAPI = (props) => {
  }
 
  return (
-  <StaticGoogleMap size="600x600" apiKey="AIzaSyDRXjXx77oZ6bA2rk3NJ6K5ZkEQ8gYP2DM" className="map">
-   <Marker.Group label="" color="red">
-    <Marker location={userZip} />
-   </Marker.Group>
-  </StaticGoogleMap>
+  <section className="user-map">
+   <p>Seller's location</p>
+   <StaticGoogleMap size="500x500" apiKey="AIzaSyDRXjXx77oZ6bA2rk3NJ6K5ZkEQ8gYP2DM" className="map">
+    <Marker.Group label="" color="red">
+     <Marker location={userZip} />
+    </Marker.Group>
+   </StaticGoogleMap>
+  </section>
  );
 }
 
