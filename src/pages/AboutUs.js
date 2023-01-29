@@ -26,7 +26,7 @@ const AboutUs = () => {
                             </div>
 
                             <div className={toggleTab === 3 ? "single-tab active-tab" : "single-tab"} onClick={() => toggleState(3)}>
-                                <h2>Are Promise</h2>
+                                <h2>Our Promise</h2>
                             </div>
 
                         </div>
@@ -51,7 +51,7 @@ const AboutUs = () => {
 
                             <div className={toggleTab === 3 ? "content active-content" : "content"}>
                                 <div className="promise-column">
-                                    <h2>What Is Are Promise?</h2>
+                                    <h2>What Is Our Promise?</h2>
                                     <p>Our promise is to provide you with a transparent and easy car buying and selling experience. We guarantee a wide selection of quality vehicles, fair pricing, and customer-focused service every step of the way.</p>
                                 </div>
                             </div>
