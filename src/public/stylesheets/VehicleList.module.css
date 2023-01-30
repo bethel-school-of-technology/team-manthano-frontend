@@ -33,12 +33,14 @@
     background-color: #FFD6E0 !important;
     color: #AD6A6C;
     border: none !important;
+    height: 100% !important;
 }
 
 .img {
     background-color: white;
     padding: 0px;
     margin: 0px;
+    max-height: 400px !important;
 }
 
 .vehicleTitle {
@@ -79,6 +81,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
 }
 
 Button:hover {
