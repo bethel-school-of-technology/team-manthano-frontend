@@ -14,7 +14,7 @@ const LoggedInVehicleList = () => {
 
     function prettifyNumber(number) {
         return new Intl.NumberFormat().format(number);
-      }
+    }
 
     function handleStatus(v) {
         if (v.Status === 'Sold') {
@@ -23,14 +23,15 @@ const LoggedInVehicleList = () => {
             return (
                 <Col key={v._id}>
                     <Card className={styles.card}>
-                        <Card.Title className={styles.vehicleTitle}>{v.Name}</Card.Title>
+                        <Card.Img variant="top" className={styles.img} src={handleImage(v)}></Card.Img><br />
                         <div className={styles.textContainer}>
-                            <a className={styles.vehicleInspectLink} href={`/vehicles/${v._id}`}>LEARN MORE</a>
+                            <Card.Title className={styles.vehicleTitle}>{v.Name}</Card.Title>
                             <Card.Text>${prettifyNumber(v.Price)}</Card.Text>
-                        </div><br />
-                        <Card.Img className={styles.img} src={handleImage(v)}></Card.Img><br />
-                        <div className={styles.textContainer}>
-                            <Card.Text className={styles.vehicleStatus}>{v.Status}</Card.Text>
+                        </div>
+                        <Card.Subtitle className={styles.subtitle}>{v.Status}</Card.Subtitle>
+                        <Card.Text className={styles.mileage}>{v.Mileage.toLocaleString('en-US')} miles</Card.Text>
+                        <div className={styles.linkContainer}>
+                            <a className={styles.cardLink} href={`/vehicles/${v._id}`}>LEARN MORE</a>
                             <Button onClick={() => { handleClick(v) }}>CONTACT SELLER</Button>
                         </div>
                     </Card>
@@ -55,7 +56,7 @@ const LoggedInVehicleList = () => {
                 .then((user) => {
                     let body = `Hello, ${user.firstName}. Is the ${v.Name} still available?`
                     console.log(user)
-                    window.open(`mailto:${user.email}?subject=${subject}&body=${body}` )
+                    window.open(`mailto:${user.email}?subject=${subject}&body=${body}`)
                 })
         } else {
             window.alert('Seller Contact Info Not Found')

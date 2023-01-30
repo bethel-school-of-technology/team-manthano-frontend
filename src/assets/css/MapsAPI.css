@@ -1,0 +1,13 @@
+.user-map {
+    border-top: 2px #AD6A6C solid;
+    text-align: center;
+}
+
+.heading {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.map {
+    border-radius: 15px;
+}

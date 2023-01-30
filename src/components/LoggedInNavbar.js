@@ -19,7 +19,7 @@ const LoggedInNavbar = () => {
     }
 
     return (
-        <Navbar className={styles.navbar} expand="lg" variant="dark" sticky="top">
+        <Navbar className={styles.navbar} expand="lg" variant="dark">
             <Container>
                 <div onClick={handleClick}>
                     <h1 className={styles.brand}><i className="bi bi-record-circle-fill" style={{ 'color': '#FFD6E0' }}></i> DONUT CAR SHOP</h1>

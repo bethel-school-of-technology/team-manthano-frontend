@@ -3,6 +3,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+.collapse {
+    margin-right: 35px;
+}
+
 .brand {
     font-size: 25px;
     margin-top: auto;

@@ -13,12 +13,16 @@ const LoggedOutVehicleList = () => {
             return (
                 <Col key={v._id}>
                     <Card className={styles.card}>
-                        <Card.Title className={styles.vehicleTitle}>{v.Name}</Card.Title>
-                        <div className={styles.textContainer}>
-                            <a className={styles.vehicleInspectLink} href={`/vehicles/${v._id}`}>LEARN MORE</a>
-                            <Card.Text>LOGIN TO SEE PRICE</Card.Text>
-                        </div><br />
                         <Card.Img className={styles.img} src={handleImage(v)}></Card.Img><br />
+                        <div className={styles.textContainer}>
+                            <Card.Title className={styles.vehicleTitle}>{v.Name}</Card.Title>
+                            <Card.Link href="/login" className={styles.cardLink}>LOGIN TO SEE PRICE</Card.Link>
+                        </div>
+                            <Card.Subtitle className={styles.subtitle}>{v.Status}</Card.Subtitle>
+                            <Card.Text className={styles.mileage}>{v.Mileage.toLocaleString('en-US')} miles</Card.Text>
+                        <div className={styles.linkContainer}>
+                            <a className={styles.cardLink} href={`/vehicles/${v._id}`}>LEARN MORE</a>
+                        </div>
                     </Card>
                 </Col>
             )
@@ -46,7 +50,7 @@ const LoggedOutVehicleList = () => {
                             <Row xs={1} md={2} className="g-5">
                                 {vehicle.map((v) => {
                                     return (
-                                      handleStatus(v)
+                                        handleStatus(v)
                                     )
                                 })}
                             </Row>
