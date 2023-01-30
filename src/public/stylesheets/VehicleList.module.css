@@ -23,40 +23,62 @@
 
 .vehicleContainer {
     display: flex;
-    flex-flow: wrap;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card {
-    padding: 15px;
     margin: 0px 25px;
-    display: flex;
-    background-color: #FFD6E0  !important;
+    background-color: #FFD6E0 !important;
     color: #AD6A6C;
     border: none !important;
 }
 
-.vehicleTitle {
-    text-align: center;
-    font-weight: 700;
+.img {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
 }
 
-.vehicleInspectLink {
+.vehicleTitle {
+    font-weight: 800 !important;
+}
+
+.subtitle {
+    color: #6c757d;
+    padding: 0px 15px;
+    margin-top: -4px;
+    margin-bottom: 8px !important;
+}
+
+.mileage {
+    padding: 0px 15px;
+}
+
+.cardLink {
     text-decoration: none;
     color: #AD6A6C;
 }
 
-.vehicleInspectLink:hover {
+.cardLink:hover {
     text-decoration: none;
     color: #824f57;
 }
 
-.img {
-    background-color: white;
-}
 
 .textContainer {
+    padding: 0px 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.linkContainer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 Button:hover {

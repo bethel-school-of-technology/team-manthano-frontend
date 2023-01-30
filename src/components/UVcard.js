@@ -13,7 +13,7 @@ const UVcard = ({ vehicle, deleteVehicle }) => {
    <Card.Body>
     <div className="col">
      <Card.Title>{Name}</Card.Title>
-     <Card.Subtitle className="mb-2 text-muted">{Status}</Card.Subtitle>
+     <Card.Subtitle className="mb-2 text-muted subtitle">{Status}</Card.Subtitle>
      <Card.Text>{Mileage.toLocaleString('en-US')} miles</Card.Text>
     </div>
     <div className="col"><Card.Text>${Price.toLocaleString('en-US')}</Card.Text></div>

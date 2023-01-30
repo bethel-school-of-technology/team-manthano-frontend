@@ -1,3 +1,6 @@
+* {
+  color: #AD6A6C;
+}
 .list-heading {
   color: #AD6A6C;
 }
@@ -14,22 +17,25 @@
   display: grid;
   grid-template-columns: 1fr 80px;
   grid-gap: 10px;
-  padding-bottom: 0;
+}
+.card-body {
+  background-color: #FFD6E0;
+}
+.btns {
+  background-color: #FFD6E0;
 }
 .uvGrid .card {
   max-width: 50vw;
+  border: 0px !important;
+  background-color: #FFD6E0;
 }
 .uvGrid .btns {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0 20px 20px;
-}
-.uvGrid a,
-.uvGrid button {
-  display: inline-block;
-  margin-top: 10px;
+  background-color: #FFD6E0;
 }
 .uvGrid .delete-btn {
   width: fit-content;
