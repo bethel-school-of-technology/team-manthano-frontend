@@ -9,7 +9,7 @@ const UVcard = ({ vehicle, deleteVehicle }) => {
 
  return (
   <Card>
-   <Card.Img variant="top" src={Images} />
+   <Card.Img className='car-img' variant="top" src={Images} />
    <Card.Body>
     <div className="col">
      <Card.Title>{Name}</Card.Title>
