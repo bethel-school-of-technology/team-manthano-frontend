@@ -25,7 +25,7 @@ const MapsAPI = (props) => {
  return (
   <section className="user-map">
    <p className='heading'>Seller's Location:</p>
-   <StaticGoogleMap size="500x500" apiKey="AIzaSyDRXjXx77oZ6bA2rk3NJ6K5ZkEQ8gYP2DM" className="map">
+   <StaticGoogleMap size="500x500" apiKey="" className="map">
     <Marker.Group label="" color="red">
      <Marker location={userZip} />
     </Marker.Group>
